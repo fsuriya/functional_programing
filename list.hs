@@ -49,3 +49,8 @@ carteian (x:xs) ys = pair  ys ++ carteian xs ys
 
 -- filter (\(x,y) -> even $ x+y) (carteian [1,2,3] [4,5,6])
 sum l = foldl (+) 0 l
+
+------------------------------------------------------------
+--reverse' l = foldr (\x acc -> acc ++ [x]) [] l
+reverse' :: [a] -> [a]
+reverse' l = foldr (\x acc -> acc ++ [x]) [] l
