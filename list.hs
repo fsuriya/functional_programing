@@ -54,3 +54,27 @@ sum l = foldl (+) 0 l
 --reverse' l = foldr (\x acc -> acc ++ [x]) [] l
 reverse' :: [a] -> [a]
 reverse' l = foldr (\x acc -> acc ++ [x]) [] l
+---------------------lec07----------------------------------
+data Month = January | February
+    | March | April
+    | May | June
+    | July | August
+    | September | October
+    | November | December
+  deriving (Show, Eq, Enum)
+
+nextMonth m = case m of
+  January -> February
+  February -> March
+  March -> April
+  April -> May
+  May -> June
+  June -> July
+  July -> August
+  August -> September
+  September -> October
+  October -> November
+  November -> December
+  December -> January
+
+months = [January .. December]
