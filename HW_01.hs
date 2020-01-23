@@ -18,7 +18,5 @@ countSub xs ys
 
 --------------------transpose-------------------------
 transpose x
-    | elem 0 (checkZero x) = []
+    | elem 0 (map length x) = []
     | otherwise = (map head x) : transpose (map tail x)
-        where   checkZero [] = []
-                checkZero x = head (map length x) : checkZero (tail x)

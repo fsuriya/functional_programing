@@ -78,3 +78,10 @@ nextMonth m = case m of
   December -> January
 
 months = [January .. December]
+--------------------------------------------------
+data Gender = Male | Female
+
+instance Eq Gender where
+  Male == Male =  True
+  Female == Female = True
+  _ == _ = False
