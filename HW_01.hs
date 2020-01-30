@@ -20,3 +20,4 @@ countSub xs ys
 transpose x
     | elem 0 (map length x) = []
     | otherwise = (map head x) : transpose (map tail x)
+

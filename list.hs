@@ -85,3 +85,7 @@ instance Eq Gender where
   Male == Male =  True
   Female == Female = True
   _ == _ = False
+
+data D = C1 Int | C2 Bool | C3 (Int,Bool) deriving (Eq, Ord)
+
+data' x = 3
