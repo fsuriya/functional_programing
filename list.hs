@@ -89,3 +89,17 @@ instance Eq Gender where
 data D = C1 Int | C2 Bool | C3 (Int,Bool) deriving (Eq, Ord)
 
 data' x = 3
+--------------------------------------------------
+instance Functor ((->) r) where
+  -- fmap :: (a -> b) -> ((->) r a) -> ((->) r b)
+  fmap :: (a -> b) -> (r -> a) -> (r -> b)
+  -- fmap f g = \r -> f (g r)
+  -- famp f g = \r (f.g) r
+  -- fmap f g = f . g
+  -- fmap f g = (.) f g
+  fmap = (.)
+
+instance Functor (Either a) where
+  fmap :: (r -> b) -> Either a r -> Either a b
+  fmap f (Left x) = Left x
+  fmap f (Right) = Right (f x)
